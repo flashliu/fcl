@@ -1,8 +1,9 @@
 {
-  "name": "fcl",
+  "name": "fclc",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "flash <469509244@qq.com>",
+  "main": "packages/index.js",
   "private": false,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
