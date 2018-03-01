@@ -1,6 +1,8 @@
 import panel from './panel'
+import modal from './modal'
 const components = [
-  panel
+  panel,
+  modal
 ]
 const install = function(Vue) {
   if (install.installed) return
@@ -8,5 +10,6 @@ const install = function(Vue) {
 }
 export default{
   install,
-  panel
+  panel,
+  modal
 }
