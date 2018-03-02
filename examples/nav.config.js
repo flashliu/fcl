@@ -13,5 +13,15 @@ export default [
     path: '/modal',
     name: 'modal',
     desc: "弹出框"
+  },
+  {
+    path: '/navbar',
+    name: 'navbar',
+    desc: "导航条"
+  },
+  {
+    path: '/tabs',
+    name: 'tabs',
+    desc: "选项卡"
   }
 ]

@@ -9,8 +9,8 @@
 <o-modal :visible.sync='visible'>
 message
 <div slot="footer">
-    <button class="btn btn-default">取消</button>
-    <button class="btn btn-primary">确认</button>
+    <button class="btn btn-default" @click='visible=false'>取消</button>
+    <button class="btn btn-primary" @click='visible=false'>确认</button>
 </div>
 </o-modal>
 </div>
@@ -29,7 +29,7 @@ visible: false
 
 ```html
 <button class="btn btn-primary" @click="visible=true">open</button>
-<o-modal :visible.sync='visible'>
+<o-modal title="Modal title" :visible.sync='visible'>
 message
 <div slot="footer">
     <button class="btn btn-default">取消</button>
@@ -51,19 +51,9 @@ data() {
 :::
 
 ### props（参数）
-| 名称   | 说明 | 类型   | 可选值 | 默认值 |
-| ------ | ---- | ------ | ------ | ------ |
-| type   | 类型 | number | 1,2    | 1      |
-| state  | 状态 | number | 1,2,3  | 1      |
-| tabNum | 桌号 | string | —     | —     |  |
+| 名称    | 说明     | 类型    | 可选值     | 默认值      |
+| ------- | -------- | ------- | ---------- | ----------- |
+| visible | 是否显示 | boolean | true,false | false       |
+| title   | 标题     | string  | —         | Modal title |
 
-### events（事件）
-| 名称      | 说明     | 类型     |
-| --------- | -------- | -------- |
-| situation | 用餐情况 | function |
-| open      | 开桌     | function |
-| close     | 关桌     | function |
-| checkout  | 结算     | function |
-| order     | 点菜     | function |
-| add       | 加菜     | function |
 

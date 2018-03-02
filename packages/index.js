@@ -1,8 +1,14 @@
 import panel from './panel'
 import modal from './modal'
+import navbar from './navbar'
+import tabs from './tabs'
+import tabitem from './tabitem'
 const components = [
   panel,
-  modal
+  modal,
+  navbar,
+  tabs,
+  tabitem
 ]
 const install = function(Vue) {
   if (install.installed) return
@@ -11,5 +17,8 @@ const install = function(Vue) {
 export default{
   install,
   panel,
-  modal
+  modal,
+  navbar,
+  tabs,
+  tabitem
 }

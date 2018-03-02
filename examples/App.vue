@@ -34,9 +34,9 @@ body {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-top: 20px;
+  padding-top: 50px;
 }
 pre{
-  border: none;
+  border: none!important;
 }
 </style>

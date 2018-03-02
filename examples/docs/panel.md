@@ -6,25 +6,25 @@
 <div class='demo-block'>
 <div class="row">
     <div class="col-md-4">
-    <o-panel tabNum="A1" :state='1' :type='1'>
+    <o-panel tab-num="A1" :state='1' :type='1'>
         <p>用餐中 6人 / ¥ 26.60</p>
         <p>用餐中 6人 / ¥ 26.60</p>
     </o-panel>
     </div>
     <div class="col-md-4">
-    <o-panel tabNum="A1" :state='2' :type='1'>
+    <o-panel tab-num="A1" :state='2' :type='1'>
         <p>用餐中 6人 / ¥ 26.60</p>
         <p>用餐中 6人 / ¥ 26.60</p>
     </o-panel>
     </div>
     <div class="col-md-4">
-    <o-panel tabNum="A1" :state='3' :type='1'>
+    <o-panel tab-num="A1" :state='3' :type='1'>
         <p>用餐中 6人 / ¥ 26.60</p>
         <p>用餐中 6人 / ¥ 26.60</p>
     </o-panel>
     </div>
     <div class="col-md-4">
-    <o-panel tabNum="A1" :state='3' :type='2'>
+    <o-panel tab-num="A1" :state='3' :type='2'>
         <p>￥26.00</p>
         <p>&nbsp;</p>
     </o-panel>
@@ -38,25 +38,25 @@
 
 <div class="row">
     <div class="col-md-4">
-    <o-panel tabNum="A1" :state='1' :type='1'>
+    <o-panel tab-num="A1" :state='1' :type='1'>
         <p>用餐中 6人 / ¥ 26.60</p>
         <p>用餐中 6人 / ¥ 26.60</p>
     </o-panel>
     </div>
     <div class="col-md-4">
-    <o-panel tabNum="A1" :state='2' :type='1'>
+    <o-panel tab-num="A1" :state='2' :type='1'>
         <p>用餐中 6人 / ¥ 26.60</p>
         <p>用餐中 6人 / ¥ 26.60</p>
     </o-panel>
     </div>
     <div class="col-md-4">
-    <o-panel tabNum="A1" :state='3' :type='1'>
+    <o-panel tab-num="A1" :state='3' :type='1'>
         <p>用餐中 6人 / ¥ 26.60</p>
         <p>用餐中 6人 / ¥ 26.60</p>
     </o-panel>
     </div>
     <div class="col-md-4">
-    <o-panel tabNum="A1" :state='3' :type='2'>
+    <o-panel tab-num="A1" :state='3' :type='2'>
         <p>￥26.00</p>
         <p>&nbsp;</p>
     </o-panel>

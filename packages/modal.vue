@@ -1,11 +1,11 @@
 <template>
     <transition name="fade">
         <div @click="$emit('update:visible', false)" class="modal-bg" v-show="visible">
-            <div class="modal-dialog">
+            <div @click.stop class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                            <span @click="$emit('update:visible', false)" aria-hidden="true">&times;</span>
                         </button>
                         <slot name="title">
                             <h4 class="modal-title">{{title}}</h4>
