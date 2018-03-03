@@ -1,6 +1,7 @@
 <script>
 export default {
   name: "OTabs",
+  props: {},
   data() {
     return {
       tablist: [],
@@ -9,30 +10,36 @@ export default {
   },
   methods: {
     addTabs(item) {
-      const index = this.$slots.default
-        .filter(item => {
-          return (
-            item.elm.nodeType === 1 &&
-            /\bo-tab-item\b/.test(item.elm.className)
-          );
-        })
-        .indexOf(item.$vnode);
-      this.tablist.splice(index, 0, item);
+      const data = this.$slots.default.filter(item => {
+        return (
+          item.elm.nodeType === 1 && /\bo-tab-item\b/.test(item.elm.className)
+        );
+      });
+      this.tablist = data;
     }
   },
   render() {
     let { tablist } = this;
     const header = this._l(tablist, (item, index) => {
+      const num = (
+        <span class="label label-warning" style="margin-left:10px;">
+          {item.child.num}
+        </span>
+      );
       return (
         <a
           href="javascript:;"
           onClick={() => {
             this.tabindex = index;
+            this.$children.forEach(item => {
+              item.changeindex();
+            });
           }}
           key={index}
           class={{ active: this.tabindex == index }}
         >
-          {item}
+          {item.child.label}
+          {item.child.num > 0 ? num : null}
         </a>
       );
     });

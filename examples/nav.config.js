@@ -23,5 +23,10 @@ export default [
     path: '/tabs',
     name: 'tabs',
     desc: "选项卡"
+  },
+  {
+    path: '/menu',
+    name: 'menu',
+    desc: "菜单"
   }
 ]

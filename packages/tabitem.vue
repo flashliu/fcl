@@ -1,18 +1,33 @@
 <template>
-    <div v-show="show" class="o-tab-item">
-        <slot></slot>
-    </div>
+  <div v-show="show" class="o-tab-item">
+    <slot></slot>
+  </div>
 </template>
 <script>
 export default {
   name: "OTabItem",
   props: {
-    label: String
+    label: String,
+    num:{
+      type:Number,
+      default:0
+    }
   },
   data() {
     return {
       show: false
     };
+  },
+  methods: {
+    changeindex() {
+      const index = this.$parent.$slots.default
+        .filter(item => {
+          return item.elm.nodeType === 1;
+        })
+        .indexOf(this.$vnode);
+
+      this.show = this.$parent.tabindex === index;
+    }
   },
   watch: {
     label(val) {
@@ -21,13 +36,7 @@ export default {
   },
   mounted() {
     this.$parent.addTabs(this.label);
-    const index = this.$parent.$slots.default
-      .filter(item => {
-        return item.elm.nodeType === 1;
-      })
-      .indexOf(this.$vnode);
-
-    this.show = this.$parent.tabindex === index;
+    this.changeindex();
   }
 };
 </script>
